@@ -1,10 +1,14 @@
 import Button from "./components/Button";
 
+const clickHandler = () => {
+  console.log("clicked");
+};
+
 function App() {
   return (
-    <div>
-      <Button />
-    </div>
+    <Button onClick={clickHandler} color="danger">
+      Greenthumb
+    </Button>
   );
 }
 
