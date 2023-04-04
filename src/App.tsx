@@ -4,9 +4,11 @@ import Alert from "./components/Alert";
 import Button from "./components/Button";
 import Like from "./components/Like";
 import Message from "./components/Message";
+import Form from "./components/Form3";
 
 function App() {
   const [alertVisible, setAlertVisible] = useState(false);
+
   const [tags, setTags] = useState(["happy", "cheerful"]);
   const [bugs, setBugs] = useState([
     { id: 1, title: "Bug 1", fixed: false },
@@ -42,13 +44,13 @@ function App() {
 
   return (
     <>
-      {console.log(bugs)}
-      {bugs.map((bug) => (
+      <Form />
+      {/* {bugs.map((bug) => (
         <p key={bug.id}>
           {bug.title} {bug.fixed === true ? "Fixed" : "New"}
         </p>
       ))}
-      <Button onClick={bugUpdateHandler}>Click</Button>
+      <Button onClick={bugUpdateHandler}>Click</Button> */}
       {/* <Like onClick={clickHandler} /> */}
       {/* <Button onClick={handleClick} color="primary">
         Alert
